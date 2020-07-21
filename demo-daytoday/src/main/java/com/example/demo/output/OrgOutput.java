@@ -1,5 +1,7 @@
 package com.example.demo.output;
 
+import java.util.List;
+
 import com.example.demo.modal.ApiOutput;
 import com.example.demo.modal.Organization;
 
@@ -10,5 +12,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OrgOutput extends ApiOutput{
 
-	public Organization org;
+	public List<Organization> org;
 }

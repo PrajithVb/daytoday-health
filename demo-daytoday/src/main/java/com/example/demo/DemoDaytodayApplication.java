@@ -15,8 +15,6 @@ import com.example.demo.repository.PersonRepository;
 @SpringBootApplication
 public class DemoDaytodayApplication {
 	
-	 @Autowired
-	  private PersonRepository repository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoDaytodayApplication.class, args);

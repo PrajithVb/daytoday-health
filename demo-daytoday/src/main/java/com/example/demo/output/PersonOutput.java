@@ -1,5 +1,7 @@
 package com.example.demo.output;
 
+import java.util.List;
+
 import com.example.demo.modal.ApiOutput;
 import com.example.demo.modal.Person;
 
@@ -10,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PersonOutput extends ApiOutput{
 
-	private Person person;
+	private List<Person> person;
 	
 }
