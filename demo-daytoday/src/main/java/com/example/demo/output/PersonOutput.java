@@ -10,8 +10,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+
 public class PersonOutput extends ApiOutput{
 
 	private List<Person> person;
 	
+	public PersonOutput ( boolean success) {
+		setSuccess(success);
+	}
 }

@@ -8,6 +8,7 @@ public interface Paths {
 	public final static String ORG="api/v1/org";
 	public final static String NAME="/name/{text}";
 	public final static String ORG_NAME="/orgName/{orgId}";
+	public final static String ORG_ID="/org/{orgId}";
 	public static final String ALL = "/all";
 
 }

@@ -13,4 +13,8 @@ import lombok.NoArgsConstructor;
 public class OrgOutput extends ApiOutput{
 
 	public List<Organization> org;
+	
+	public OrgOutput(boolean success) {
+		setSuccess(success);
+	}
 }

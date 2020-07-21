@@ -84,6 +84,9 @@ public class PersonApiServiceImpl implements PersonApiService {
 		if(json.getGender()!=null) {
 			p.setGender(Gender.valueOf(json.getGender()));
 		}
+		if(json.getDeptId()!=null) {
+			p.setDeptId(json.getDeptId());
+		}
 		}
 		return personRepository.save(p);
 		 
@@ -142,6 +145,9 @@ public class PersonApiServiceImpl implements PersonApiService {
 			if(json.getGender()!=null) {
 				p.setGender(Gender.valueOf(json.getGender()));
 			}
+			if(json.getDeptId()!=null) {
+				p.setDeptId(json.getDeptId());
+			}
 			}
 			personRepository.save(p);
 			return null;
@@ -157,7 +163,8 @@ public class PersonApiServiceImpl implements PersonApiService {
 		
 		TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny("^"+namePart);
 		PersonOutput p = new PersonOutput();
-		p.setPerson(personRepository.findAllBy(criteria));;
+		p.setPerson(personRepository.findByFirstNameStartingWith(namePart));
+		p.setSuccess(true);
 		return p;
 	}
 
@@ -166,6 +173,7 @@ public class PersonApiServiceImpl implements PersonApiService {
 		// TODO Auto-generated method stub
 		PersonOutput p = new PersonOutput();
 		p.setPerson(personRepository.findByDeptId(id));
+		p.setSuccess(true);
 		return p;
 	}
 

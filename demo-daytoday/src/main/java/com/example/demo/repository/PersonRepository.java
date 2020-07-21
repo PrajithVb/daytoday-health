@@ -13,5 +13,6 @@ public interface PersonRepository extends MongoRepository<Person, String> {
 	
 	  public List<Person> findByDeptId(String deptId);
 	  public List<Person> findAllBy(TextCriteria criteria);
+	  public List<Person> findByFirstNameStartingWith(String name);
 
 }
